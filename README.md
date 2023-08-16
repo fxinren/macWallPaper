@@ -31,11 +31,11 @@ File: com.wallpaperhelper.plist
 ### load launchctl service
 
 ```bash
-加载并启用
+# To start service
 launchctl load -w 'com.wallpaperhelper.plist'
 launchctl start 'com.wallpaperhelper.plist'
 
-重新加载文件
+# To unload and stop service
 launchctl unload -w 'com.wallpaperhelper.plist'
 launchctl load -w 'com.wallpaperhelper.plist'
 ```
