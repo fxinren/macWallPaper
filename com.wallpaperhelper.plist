@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC -//Apple Computer//DTD PLIST 1.0//EN http://www.apple.com/DTDs/PropertyList-1.0.dtd >
+<plist version="1.0">
+  <dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+	  <key>PATH</key>
+	  <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+	</dict>
+	<key>Label</key>
+	<string>com.wallpaperhelper</string>
+	  <!-- absolute path to /_chgWallPaper.scpt -->
+	  <key>ProgramArguments</key>
+	<array>
+	  <string>/path/to/_chgWallPaper.scpt</string>
+		  <string></string>
+	</array>
+	<!-- period, in seconds -->
+	<key>StartInterval</key>
+	<integer>1800</integer>
+	<key>RunAtLoad</key>
+	<false/>
+	  <key>ProcessType</key>
+	<string>Background</string>
+	<key>KeepAlive</key>
+	<false/>
+	<key>LaunchOnlyOnce</key>
+	<false/>
+	<key>StandardOutPath</key>
+	<string>/path/to/logs-files/wallpaper_std.log</string>
+	<key>StandardErrorPath</key>
+	<string>/path/to/logs-files/wallpaper_err.log</string>
+	  <!-- which user will use this script -->
+	<key>UserName</key>
+	<string>who</string>
+	  <key>GroupName</key>
+	<string>staff</string>
+  </dict>
+</plist>
