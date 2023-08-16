@@ -5,18 +5,16 @@ Changing macOS wall paper periodically with Apple script &amp; Launchctl
 
 ### fix some config
 
+File: _chgWallPaper.scpt
 
-
-_chgWallPaper.scpt
-
-'''bash
+```bash
     -- to config images folder location
 	set wallPaperDir to homeDir & "/path/to/all/your/wall-paper/images"
-'''
+```
 
-com.wallpaperhelper.plist
+File: com.wallpaperhelper.plist
 
-'''bash
+```bash
     <string>/path/to/_chgWallPaper.scpt</string>
 
 
@@ -28,11 +26,11 @@ com.wallpaperhelper.plist
     <!-- which user will use this script -->
 	<key>UserName</key>
 	<string>who</string>
-'''
+```
 
 ### load launchctl service
 
-'''bash
+```bash
 加载并启用
 launchctl load -w 'com.wallpaperhelper.plist'
 launchctl start 'com.wallpaperhelper.plist'
@@ -40,5 +38,4 @@ launchctl start 'com.wallpaperhelper.plist'
 重新加载文件
 launchctl unload -w 'com.wallpaperhelper.plist'
 launchctl load -w 'com.wallpaperhelper.plist'
-
-'''
+```
